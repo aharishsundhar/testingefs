@@ -18,6 +18,9 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with: 
+          path: './'
       - name: code commit
         run: |          
           echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="fs-b4252543"' ./test.json `" > ./test.json
