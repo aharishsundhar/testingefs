@@ -30,7 +30,7 @@ jobs:
           message: 'Add the EFS volume generated application'
           add: './test.json --force'
           cwd: './'  
-
+          token: ${{secrets.COMMIT}}
 
           
 
