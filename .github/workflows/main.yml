@@ -28,8 +28,9 @@ jobs:
           commit_message: 'Add the EFS volume generated application'
           file_pattern: ./.github/workflows/test.json 
           push_options: '--force'
+          tagging_message: 'v1.0.0'
 #           cwd: './'  
-          token: ${{secrets.COMMIT}}
+#           token: ${{secrets.COMMIT}}
 
           
 
