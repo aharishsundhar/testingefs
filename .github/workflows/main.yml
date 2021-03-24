@@ -23,7 +23,7 @@ jobs:
           echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="fs-b4252543"' ./test.json `" > ./test.json
       - uses: EndBug/add-and-commit@v6
         with:
-          message: 'Add the version and date'
+          message: 'Add the EFS volume generated application'
           add: './test.json --force'
           cwd: './' 
           token: ${{ secrets.COMMIT }} 
