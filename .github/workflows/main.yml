@@ -23,7 +23,7 @@ jobs:
           path: './'
       - name: code commit
         run: |          
-          echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="fs-b4252543"' ./test.json `" > ./test.json
+          echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="null"' ./.github/workflows/test.json `" > ./.github/workflows/test.json
       - uses: EndBug/add-and-commit@v6
         with:
           message: 'Add the EFS volume generated application'
