@@ -34,8 +34,8 @@ jobs:
 #           token: ${{secrets.COMMIT}}
       - name: Take time to Mongodb_Script_Upload
         run: |
-          sleep 30s
-          cd devops/local/docker
-          mongo ${{ needs.Deploy_backend.outputs.public_ip }}:27017/efscode_7462 -u admin -p password --authenticationDatabase admin < mongo.js
+          ls
+#          cd devops/local/docker
+#          mongo ${{ needs.Deploy_backend.outputs.public_ip }}:27017/efscode_7462 -u admin -p password --authenticationDatabase admin < mongo.js
           
 
