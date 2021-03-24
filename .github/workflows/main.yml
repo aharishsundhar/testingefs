@@ -30,7 +30,7 @@ jobs:
       - uses: EndBug/add-and-commit@v7
         with:
           message: 'Add the EFS volume generated application'
-          add: './test.json --force'
+          add: './.github/workflows/test.json --force'
           cwd: './'  
           token: ${{secrets.COMMIT}}
 
