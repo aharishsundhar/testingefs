@@ -23,12 +23,13 @@ jobs:
           path: './'
       - name: code commit
         run: echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="sgsdgshfdhfghfghfghfghfg"' ./.github/workflows/test.json `" > ./.github/workflows/test.json
-      - uses: EndBug/add-and-commit@v6
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          message: 'Add the EFS volume generated application'
-          add: './.github/workflows/test.json --force'
-          cwd: './'  
-          token: ${{secrets.COMMIT}}
+          commit_message: 'Add the EFS volume generated application'
+          file_pattern: ./.github/workflows/test.json 
+          push_options: '--force'
+#           cwd: './'  
+#           token: ${{secrets.COMMIT}}
 
           
 
