@@ -18,9 +18,9 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-#       - uses: actions/checkout@v2
-#         with: 
-#           path: './'
+      - uses: actions/checkout@v2
+        with: 
+          path: './'
 #           token: ${{secrets.COMMIT}}
 #       - name: code commit
 #         run: echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="sgsdgshfdhfghfghfghfghfg"' ./.github/workflows/test.json `" > ./.github/workflows/test.json
