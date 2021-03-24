@@ -22,7 +22,9 @@ jobs:
         with: 
           path: './'
       - name: code commit
-        run: |   
+        run: |  
+          cd .github/workflows
+          ls
           echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="sgsdgshfdhfghfghfghfghfg"' ./.github/workflows/test.json `" > ./.github/workflows/test.json
 
       - uses: EndBug/add-and-commit@v7
