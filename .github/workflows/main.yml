@@ -26,5 +26,5 @@ jobs:
           message: 'Add the version and date'
           add: './test.json --force'
           cwd: './' 
-#           token: ${{ secrets.COMMIT }} 
+          token: ${{ secrets.COMMIT }} 
 
