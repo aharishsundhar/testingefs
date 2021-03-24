@@ -1,25 +1,20 @@
-{    
+{
   "volumes": [
-          {
-              "fsxWindowsFileServerVolumeConfiguration": null,
-              "efsVolumeConfiguration": {
-                  "transitEncryptionPort": null,
-                  "fileSystemId": null,
-                  "authorizationConfig": {
-                      "iam": "DISABLED",
-                      "accessPointId": null
-                  },
-                  "transitEncryption": "DISABLED",
-                  "rootDirectory": "/"
-              },
-              "name": null,
-              "host": null,
-              "dockerVolumeConfiguration": null
-          }
-      ]}
-
-
-
-
-
-      
+    {
+      "fsxWindowsFileServerVolumeConfiguration": null,
+      "efsVolumeConfiguration": {
+        "transitEncryptionPort": null,
+        "fileSystemId": "sgsdgshfdhfghfghfghfghfg",
+        "authorizationConfig": {
+          "iam": "DISABLED",
+          "accessPointId": null
+        },
+        "transitEncryption": "DISABLED",
+        "rootDirectory": "/"
+      },
+      "name": null,
+      "host": null,
+      "dockerVolumeConfiguration": null
+    }
+  ]
+}
