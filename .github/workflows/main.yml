@@ -28,7 +28,7 @@ jobs:
           message: 'Add the EFS volume generated application'
           add: './.github/workflows/test.json --force'
           cwd: './'  
-          token: ${{secrets.COMMIT}}
+#           token: ${{secrets.COMMIT}}
 
           
 
