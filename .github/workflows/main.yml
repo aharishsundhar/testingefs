@@ -18,20 +18,24 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with: 
-          path: './'
-          token: ${{secrets.COMMIT}}
-      - name: code commit
-        run: echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="sgsdgshfdhfghfghfghfghfg"' ./.github/workflows/test.json `" > ./.github/workflows/test.json
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'Add the EFS volume generated application'
-          file_pattern: ./.github/workflows/test.json 
-          push_options: '--force'
-          tagging_message: 'v1.0.0'
+#       - uses: actions/checkout@v2
+#         with: 
+#           path: './'
+#           token: ${{secrets.COMMIT}}
+#       - name: code commit
+#         run: echo "`jq '.volumes[0].efsVolumeConfiguration.fileSystemId="sgsdgshfdhfghfghfghfghfg"' ./.github/workflows/test.json `" > ./.github/workflows/test.json
+#       - uses: stefanzweifel/git-auto-commit-action@v4
+#         with:
+#           commit_message: 'Add the EFS volume generated application'
+#           file_pattern: ./.github/workflows/test.json 
+#           push_options: '--force'
+#           tagging_message: 'v1.0.0'
 #           cwd: './'  
 #           token: ${{secrets.COMMIT}}
-
+      - name: Take time to Mongodb_Script_Upload
+        run: |
+          sleep 30s
+          cd devops/local/docker
+          mongo ${{ needs.Deploy_backend.outputs.public_ip }}:27017/efscode_7462 -u admin -p password --authenticationDatabase admin < mongo.js
           
 
